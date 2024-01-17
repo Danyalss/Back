@@ -27,4 +27,4 @@ image_path = os.path.join(os.getcwd(), "temp.png")
 ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, image_path, 0)
 
 # حذف تصویر موقت
-os.remove("temp.png")
+# os.remove("temp.png")
