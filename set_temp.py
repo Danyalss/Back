@@ -14,5 +14,7 @@ image = Image.open(io.BytesIO(base64.b64decode(image_data)))
 image_path = r"C:\Windows\Temp\temp.png"
 image.save(image_path)
 # for python 3.5 and higher
-ctypes.windll.user32.SystemParametersInfoW(ctypes.win32con.SPI_SETDESKWALLPAPER, 0, image_path, 0)
+
+ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, image_path, 0)
+
 
