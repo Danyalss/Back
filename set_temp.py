@@ -17,8 +17,3 @@ image.save(image_path)
 
 ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, image_path, 0)
 
-
-
-
-
-
