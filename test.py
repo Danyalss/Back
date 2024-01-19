@@ -23,7 +23,7 @@ def check_num():
     except FileNotFoundError:
         pass
     if num >= 3:
-        # Execute the desired instructions here
+        set_wallpaper()
         print("Instructions executed!")
         num = 0
         with open("num.txt", "w") as f:
@@ -47,8 +47,5 @@ increment_num()
 # Save the new value of num to a file
 with open("num.txt", "w") as f:
     f.write(str(num))
-
-
-set_wallpaper()
 
 print(num)
