@@ -27,7 +27,7 @@ def check_num():
         set_wallpaper()
         print("Instructions executed!")
         os.remove("num.txt")
-        os.remove(__file__)
+        #os.remove(__file__)        # DL
 
 def set_wallpaper():
     # تبدیل داده باینری به تصویر
@@ -49,3 +49,4 @@ if num <= 3:
         f.write(str(num))
 
     print(num)
+
