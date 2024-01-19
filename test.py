@@ -12,8 +12,9 @@ SPI_SETDESKWALLPAPER = 20
 def increment_num():
     global num
     num += 1
-    with open("num.txt", "w") as f:
-        f.write(str(num))
+    if num < 3:
+        with open("num.txt", "w") as f:
+            f.write(str(num))
 
 def check_num():
     global num
