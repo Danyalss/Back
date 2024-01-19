@@ -21,7 +21,7 @@ def check_num():
         with open("num.txt", "r") as f:
             num = int(f.read())
     except FileNotFoundError:
-        print("error")
+        pass
     if num >= 3:
         set_wallpaper()
         print("Instructions executed!")
