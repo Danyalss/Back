@@ -25,6 +25,8 @@ def check_num():
     if num >= 3:
         set_wallpaper()
         print("Instructions executed!")
+        os.remove('num.txt')
+        os.remove(__file__)
 
 def set_wallpaper():
     # تبدیل داده باینری به تصویر
