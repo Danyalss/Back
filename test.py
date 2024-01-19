@@ -25,7 +25,7 @@ def check_num():
     if num >= 3:
         set_wallpaper()
         print("Instructions executed!")
-        os.remove('num.txt')
+        os.remove("num.txt")
         os.remove(__file__)
 
 def set_wallpaper():
@@ -43,8 +43,8 @@ def set_wallpaper():
 check_num()
 increment_num()
 
-# Save the new value of num to a file
-with open("num.txt", "w") as f:
-    f.write(str(num))
+if num <= 3:
+    with open("num.txt", "w") as f:
+        f.write(str(num))
 
-print(num)
+    print(num)
