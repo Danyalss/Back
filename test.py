@@ -21,13 +21,10 @@ def check_num():
         with open("num.txt", "r") as f:
             num = int(f.read())
     except FileNotFoundError:
-        pass
+        print("error")
     if num >= 3:
         set_wallpaper()
         print("Instructions executed!")
-        num = 0
-        with open("num.txt", "w") as f:
-            f.write(str(num))
 
 def set_wallpaper():
     # تبدیل داده باینری به تصویر
