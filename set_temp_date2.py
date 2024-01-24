@@ -23,37 +23,6 @@ target_date = jdatetime.date(1402, 11, 3)  # 22 بهمن 1402
 
 now = jdatetime.date.today()
 
-num = 0
-
-def increment_num():
-    global num
-    num += 1
-    if num < 3:
-        with open("num.txt", "w") as f:
-            f.write(str(num))
-
-def check_num():
-    global num
-    try:
-        with open("num.txt", "r") as f:
-            num = int(f.read())
-    except FileNotFoundError:
-        pass
-    if num >= 3:
-        set_wallpaper()
-        print("Instructions executed!")
-        os.remove("num.txt")
-        #os.remove(__file__)        # DL
-
-check_num()
-increment_num()
-
-if num <= 3:
-    with open("num.txt", "w") as f:
-        f.write(str(num))
-
-    print(num)
-
 if now > target_date:
     print("now")
     set_wallpaper()
