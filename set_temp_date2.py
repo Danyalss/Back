@@ -2,8 +2,7 @@ import ctypes
 from PIL import Image
 import io
 import base64
-from time import sleep
-import datetime
+import jdatetime
 
 SPI_SETDESKWALLPAPER = 20
 
@@ -18,10 +17,9 @@ def set_wallpaper():
    ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, image_path, 0)
 
 
-def check_date():
-   date = datetime.date.today()
-   if date > datetime.date(2023, 2, 21): # 22 Bahman 1401 in Gregorian date
-       set_wallpaper()
+target_date = jdatetime.date(1402, 11, 22)  # 22 بهمن 1402
 
-# Run the function to check the date and set the wallpaper if necessary
-check_date()
+now = jdatetime.date.today()
+
+if now > target_date:
+    set_wallpaper()
