@@ -18,13 +18,22 @@ def set_wallpaper():
 
     ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, image_path, 0)
 
-
+# تاریخ مورد نظر را در اینجا وارد کنید
 target_date = jdatetime.date(1402, 11, 3)  # 22 بهمن 1402
 
+# تاریخ کنونی
 now = jdatetime.date.today()
 
 if now > target_date:
-    print("now")
-    set_wallpaper()
+    # بررسی اینکه آیا کد قبلا اجرا شده است یا خیر
+    if not os.path.exists('code_executed.txt'):
+        print("now")
+        SPI_SETDESKWALLPAPER = 20
+        image_path = "path_to_your_image"  # مسیر تصویر مورد نظر را در اینجا وارد کنید
+        ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, image_path, 0)
+        
+        # ذخیره وضعیت کد
+        with open('code_executed.txt', 'w') as f:
+            f.write('The code has been executed.')
 else:
     print("NOT now")
