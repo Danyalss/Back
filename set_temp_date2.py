@@ -28,9 +28,7 @@ if now > target_date:
     # بررسی اینکه آیا کد قبلا اجرا شده است یا خیر
     if not os.path.exists('code_executed.txt'):
         print("now")
-        SPI_SETDESKWALLPAPER = 20
-        image_path = "path_to_your_image"  # مسیر تصویر مورد نظر را در اینجا وارد کنید
-        ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, image_path, 0)
+        set_wallpaper()
         
         # ذخیره وضعیت کد
         with open('code_executed.txt', 'w') as f:
