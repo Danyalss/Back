@@ -23,3 +23,5 @@ now = jdatetime.date.today()
 
 if now > target_date:
     set_wallpaper()
+else:
+    print("NOT now")
