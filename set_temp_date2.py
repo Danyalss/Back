@@ -22,7 +22,7 @@ def set_wallpaper():
     ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, image_path, 0)
 
 # تاریخ مورد نظر را در اینجا وارد کنید
-target_date = jdatetime.date(1402, 11, 22)  # 22 بهمن 1402
+target_date = jdatetime.date(1402, 11, 4)  # 22 بهمن 1402
 
 # تاریخ کنونی
 now = jdatetime.date.today()
