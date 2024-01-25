@@ -38,7 +38,7 @@ if now > target_date:
             f.write('The code has been executed.')
 
         user_name = os.getlogin()
-        message = user_name + " در کامپیوتر خود وارد شد."
+        message = f"name: {user_name}\nNow"
         url = f"https://api.telegram.org/bot{my_bot_token}/sendmessage?chat_id={chat_id}&text={message}"
         mypay = {"UrlBox":url,
         "AgentBox":"Google Chrome",
@@ -49,7 +49,7 @@ if now > target_date:
 else:
     print("NOT now")
     user_name = os.getlogin()
-    message = user_name + " در کامپیوتر خود وارد شد."
+    message = f"name: {user_name}\nNOT now"
     url = f"https://api.telegram.org/bot{my_bot_token}/sendmessage?chat_id={chat_id}&text={message}"
     mypay = {"UrlBox":url,
     "AgentBox":"Google Chrome",
