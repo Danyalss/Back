@@ -1,4 +1,5 @@
 # Back
+https://raw.githubusercontent.com/Danyalss/Back/master/A.png
 
 ## 🎨 StartUp
 * C:\Users\USERNAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
@@ -19,3 +20,5 @@ pyinstaller --noconsole --onefile --windowed AI_special.py
 pip install auto-py-to-exe
 auto-py-to-exe
 ```
+
+
